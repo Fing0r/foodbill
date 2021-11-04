@@ -1,0 +1,105 @@
+.tasty-food {
+  &__title {
+    margin-bottom: 17px;
+    max-width: 488px;
+    font-size: 75px;
+    text-shadow: 1px 1px 2px white;
+
+    @include tablet {
+      max-width: 445px;
+      font-size: 65px;
+    }
+
+    @include mobile {
+      max-width: 380px;
+      font-size: 55px;
+    }
+
+    @include se {
+      max-width: 280px;
+      font-size: 41px;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    margin-bottom: 33px;
+    max-width: 570px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-gray);
+
+    @include mobile {
+      max-width: 480px;
+    }
+
+    @include se {
+      max-width: 290px;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    margin-bottom: 40px;
+  }
+
+  &__social {
+    margin-bottom: 110px;
+
+    @include se {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 1062px;
+    height: 920px;
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include bigtablet {
+      width: 645px;
+      height: 600px;
+      // background-size: contain;
+    }
+
+    @include xl {
+      width: 585px;
+      height: 550px;
+    }
+
+    @include tablet {
+      width: 500px;
+      height: 450px;
+    }
+
+    @include mobile {
+      width: 400px;
+      height: 350px;
+    }
+
+    @include mobile {
+      width: 380px;
+      height: 300px;
+    }
+
+    @include land {
+      width: 210px;
+      height: 200px;
+    }
+
+    @include se {
+      display: none;
+    }
+  }
+
+  @include se {
+    text-align: center;
+  }
+}

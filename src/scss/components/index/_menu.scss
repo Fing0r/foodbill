@@ -1,0 +1,131 @@
+.menu {
+  margin-right: 26px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include tablet {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__reg {
+    display: none;
+    font-size: 25px;
+
+    @include se {
+      display: inline-block;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__link {
+    position: relative;
+    outline: transparent;
+    text-shadow: 1px 1px 2px white;
+
+    span {
+      position: absolute;
+      left: 0;
+      display: block;
+      overflow: hidden;
+      width: 0;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: width 0.3s;
+
+      &::before {
+        content: attr(data-text);
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 100%;
+        color: var(--color-christine);
+        backface-visibility: hidden;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &:focus {
+      border-radius: 3px;
+      box-shadow: 0 0 0 3px rgba(var(--color-christine-rgb), 0.5);
+    }
+
+    &:hover:not(.menu__link--active) {
+      span {
+        width: 100%;
+        transition: width 0.3s;
+      }
+    }
+
+    &:active {
+      background-color: var(--color-christine);
+    }
+
+    @include tablet {
+      display: block;
+      padding: 20px;
+    }
+
+    &--active {
+      color: var(--color-christine);
+      transition: color 0.3s;
+
+      @include tablet {
+        color: inherit;
+      }
+    }
+  }
+
+  @include tablet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    display: block;
+    overflow: auto;
+    margin: auto 0;
+    padding-top: 74px;
+    height: 100vh;
+    font-size: 37px;
+    text-align: center;
+    background-color: var(--color-cinderella);
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    @include se {
+      font-size: 30px;
+    }
+  }
+
+  &--active {
+    @include tablet {
+      transform: translateY(0%);
+      transition: transform 0.3s;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+
+  z-index: 101;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

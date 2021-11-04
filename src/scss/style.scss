@@ -1,0 +1,27 @@
+// базовые подключения
+
+@import 'mixin';
+@import 'fonts';
+@import 'vars';
+@import 'libs';
+@import 'reset';
+@import 'global';
+
+// подключения компонентов страницы
+
+@import "./components/header";
+@import "./components/footer";
+
+@import "./components/social";
+@import "./components/product-card";
+
+@import "./components/index/menu";
+@import "./components/index/tasty-food";
+@import "./components/index/address-top";
+
+@import "./components/index/how-work";
+@import "./components/index/services";
+@import "./components/index/product";
+@import "./components/index/download";
+@import "./components/index/testimonials";
+@import "./components/index/subcribe";

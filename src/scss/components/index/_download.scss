@@ -1,0 +1,172 @@
+.download {
+  position: relative;
+  padding: 231px 0 230px;
+
+  &__wrapper {
+    position: relative;
+    border-radius: 60px 0;
+    padding: 90px 0 86px 30px;
+    background-color: var(--color-black);
+
+    @include xl {
+      padding-left: 50px;
+    }
+
+    @include tablet {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    @include mobile {
+       padding-top: 60px;
+       padding-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    max-width: 321px;
+
+    @include tablet {
+      margin: 0 auto;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include land {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include land {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    outline: transparent;
+    border-radius: 13px;
+    padding: 20px 29px 20px 81px;
+    background-position: 29px center;
+    background-size: 38px 40px;
+    background-repeat: no-repeat;
+    background-color: var(--color-white);
+    transition: box-shadow 0.3s, opacity 0.3s;
+    min-width: 220px;
+
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-christine);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    &--android {
+      background-image: url("../img/android.svg");
+    }
+
+    &--apple {
+      background-image: url("../img/apple.svg");
+      background-size: 33px 40px;
+    }
+  }
+
+  &__store {
+    font-size: 20px;
+  }
+
+  &__from {
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 11px;
+  }
+
+  &__phone {
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 20px 28px 90px -15px rgba(0, 0, 0, 0.2);
+
+    @include xl {
+      border-radius: 30px;
+      width: 180px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @include tablet {
+      width: 130px;
+    }
+
+    @include mobile {
+      border-radius: 15px;
+      width: 120px;
+    }
+
+    &--one {
+      right: 46px;
+      top: -67px;
+
+      @include xl {
+        top: -31px;
+      }
+
+      @include tablet {
+        right: 21px;
+        top: -86px;
+        bottom: auto;
+      }
+
+      @include mobile {
+         display: none;
+      }
+    }
+
+    &--two {
+      right: 363px;
+      bottom: -71px;
+
+      @include xl {
+        right: 250px;
+        bottom: -31px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__store,
+  &__from {
+    display: block;
+  }
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 70px 0;
+  }
+}

@@ -1,0 +1,88 @@
+.address-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 60px 0;
+  padding: 60px 0;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.07);
+  text-align: center;
+
+  &__item {
+    position: relative;
+    padding-top: 56px;
+
+    &:not(:last-child) {
+      border-right: 2px solid #ddd;
+
+      @include mobile {
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  &__info {
+    display: block;
+    margin-bottom: 4px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+    }
+
+    &::before {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-christine);
+    }
+
+    &::after {
+      @include mask(16, 16, var(--color-white), no);
+
+      top: 12px;
+    }
+
+    &--work {
+      &::after {
+        mask-image: url("../img/sprite.svg#clock");
+      }
+    }
+
+    &--local {
+      &::after {
+        mask-image: url("../img/sprite.svg#local");
+        width: 14px;
+      }
+    }
+
+    &--tel {
+      &::after {
+        mask-image: url("../img/sprite.svg#tel");
+      }
+    }
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--color-gray);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+    padding-right: 60px;
+    padding-left: 60px;
+    gap: 20px;
+  }
+
+  @include se {
+     padding-right: 30px;
+     padding-left: 30px;
+  }
+}

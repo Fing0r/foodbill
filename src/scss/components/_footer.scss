@@ -1,0 +1,180 @@
+.footer {
+  background-color: #f5f5f5;
+
+  &__top {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-top: 100px;
+    padding-bottom: 61px;
+
+    @include tablet {
+      display: grid;
+      justify-content: space-around;
+      grid-template-columns: repeat(2, 260px);
+      padding-top: 70px;
+      padding-bottom: 45px;
+      gap: 30px 0;
+    }
+
+    @include land {
+      display: grid;
+      justify-content: space-around;
+      grid-template-columns: repeat(1, 260px);
+      padding-top: 70px;
+      padding-bottom: 45px;
+      text-align: center;
+      gap: 40px 0;
+    }
+  }
+
+  &__content {
+    margin-right: 29px;
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__work-day {
+    margin-right: 83px;
+
+    @include xl {
+      margin-right: 60px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__menu {
+    margin-right: auto;
+
+    @include land {
+      margin-left: auto;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 38px;
+
+    img {
+      @include land {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__social {
+    @include land {
+      justify-content: center;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 27px;
+    max-width: 270px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-gray);
+  }
+
+  &__title {
+    @include line-clamp(22, 2.3, 1);
+
+    margin-bottom: 28px;
+
+    @include mobile {
+      @include line-clamp(22, 1, 1);
+    }
+  }
+
+  &__item {
+    @include line-clamp(16, 2, 1);
+
+    font-weight: 400;
+    color: var(--color-gray);
+  }
+
+  &__items {
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    padding-top: 23px;
+    padding-bottom: 29px;
+  }
+
+  &__copy {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: center;
+    color: var(--color-gray);
+
+    @include se {
+      font-size: 14px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+    outline: transparent;
+    border-radius: 10px;
+    padding-right: 5px;
+    width: 270px;
+    height: 50px;
+    background-color: var(--color-white);
+
+    @include tablet {
+      width: 200px;
+    }
+
+    @include land {
+      margin: 0 auto;
+    }
+  }
+
+  &__input {
+    align-self: center;
+    outline: transparent;
+    border-radius: 13px;
+    padding: 12px 19px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 2;
+    background-color: transparent;
+
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+
+  &__btn {
+    align-self: center;
+    border-radius: 10px;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    max-width: 40px;
+  }
+
+  &__arrow-icon {
+    fill: var(--color-white);
+  }
+}
+
+.contact {
+  max-width: 156px;
+  font-weight: 400;
+  line-height: 2;
+  color: var(--color-gray);
+
+  @include land {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}

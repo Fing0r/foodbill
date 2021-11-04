@@ -1,0 +1,18 @@
+@mixin mask($width, $height, $color, $svg) {
+  @if $svg==no {
+    width: $width + px;
+    height: $height + px;
+    background-color: $color;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+  } @else {
+    width: $width + px;
+    height: $height + px;
+    background-color: $color;
+    mask-image: url("../img/sprite.svg#"+$svg+"");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+  }
+}

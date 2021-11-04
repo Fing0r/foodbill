@@ -1,0 +1,35 @@
+.product {
+  &__title {
+    margin-bottom: 59px;
+
+    @include mobile {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+    gap: 30px;
+
+    @include mobile {
+      justify-content: center;
+      grid-template-columns: repeat(2, minmax(130px, 370px));
+      margin-bottom: 45px;
+      gap: 15px;
+    }
+
+    @include land {
+      grid-template-columns: repeat(1, minmax(130px, 370px));
+      margin-bottom: 30px;
+    }
+  }
+
+  &__more {
+    display: block;
+    margin: 0 auto;
+    padding-right: 57px;
+    padding-left: 13px;
+  }
+}
