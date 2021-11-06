@@ -40,47 +40,51 @@
   }
 
   &__box {
-    display: flex;
     padding: 16px 19px 50px;
+    overflow: hidden;
 
     @include mobile {
       padding-bottom: 40px;
     }
   }
 
-  &__title {
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: 19px;
-    font-size: 20px;
+
+  }
+
+  &__title {
+    @include line-clamp(20, 1.2, 1);
 
     @include tablet {
       @include line-clamp(16, 1.2, 1);
     }
   }
 
-  &__left {
-    overflow: hidden;
-    margin-right: auto;
-  }
-
-  &__right {
-    text-align: right;
-    transform: translateY(20px);
-  }
-
   &__rating {
     position: relative;
     display: block;
-    margin-bottom: 16px;
     font-size: 11px;
+    transform: translateY(9px);
 
     &::after {
       @include mask(15, 14, var(--color-christine), star);
 
       content: "";
       position: absolute;
-      right: 21px;
+      right: 22px;
       top: -1px;
     }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-align: right;
   }
 
   &__price {
