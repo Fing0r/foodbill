@@ -1,6 +1,6 @@
 .product {
   &__title {
-    margin-bottom: 59px;
+    margin-bottom: 61px;
 
     @include mobile {
       margin-bottom: 45px;
@@ -10,8 +10,8 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 60px;
-    gap: 30px;
+    margin-bottom: 55px;
+    gap: 26px 29px;
 
     @include mobile {
       justify-content: center;

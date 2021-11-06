@@ -191,7 +191,7 @@
   }
 }
 
-.review {
+.blockquote {
   display: block;
   padding-top: 94px;
   text-align: center;
@@ -220,6 +220,11 @@
     @include mobile {
       margin-bottom: 10px;
     }
+  }
+
+  
+  &__info {
+  font-style: normal;
   }
 
   &__name {
